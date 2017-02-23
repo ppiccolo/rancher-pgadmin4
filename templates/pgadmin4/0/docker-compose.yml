@@ -1,0 +1,16 @@
+pgadmin4:
+  image: ppiccolo/pgadmin4:1.2
+  labels:
+    io.rancher.container.hostname_override: container_name
+    io.rancher.container.pull_image: always
+  ports:
+    - ${SERVER_PORT}:${SERVER_PORT}
+  environment:
+    - SERVER_MODE=${SERVER_MODE}
+    - SERVER_PORT=${SERVER_PORT}
+    - STORAGE_MOUNT=${STORAGE_MOUNT}
+    - MAIL_SERVER=${MAIL_SERVER}
+    - MAIL_PORT=${MAIL_PORT}
+    - MAIL_USE_SSL=${MAIL_USE_SSL}
+    - MAIL_USERNAME=${MAIL_USERNAME}
+    - MAIL_PASSWORD=${MAIL_PASSWORD}
