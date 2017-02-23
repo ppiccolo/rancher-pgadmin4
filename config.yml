@@ -1,0 +1,5 @@
+name: pgadmin4
+description: |
+  Postgres web admin
+version: v0.0.1-rancher1
+category: DB Administration
